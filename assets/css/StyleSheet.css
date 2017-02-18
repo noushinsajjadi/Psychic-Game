@@ -1,0 +1,86 @@
+﻿
+body 
+{
+    margin: 0;
+	padding: 0;
+	font-family: "Arial", "Times New Roman", Times, serif;
+	font-size: 18px;
+	color:black;
+}
+ a
+ {
+     text-decoration:none;
+     color: black;
+ }
+
+
+ header
+ { 
+     background-color:White;
+     width:960px;
+     height:45px;
+     border-bottom-width:2px;
+     border-bottom-style:inset;
+     border-bottom-color:#dddddd;
+     margin-top:10px;
+     
+
+ }
+ footer
+ {
+     background-color:#666666;
+     color:White;
+     width:960px;
+     height:40px;
+     border-top-width:5px;
+     border-top-style:solid;
+     border-top-color:#4aaaa5;
+     margin-top:10px;
+     font-size:10px;
+     padding-top:15px;
+     bottom:0px;
+     }
+ 
+ 
+      
+  .MainDiv
+{
+    width:800px;
+    margin-top:40px;
+    height: 500px;
+   
+}
+  .PageTitle
+ {  
+     width:300px;
+     background-color:#4aaaa5;
+     color:White;
+     font-size:35px;
+     font-weight:bold;
+     float:left;
+     margin-left:100px;
+     text-align:center;
+     height:45px;
+ }
+ .inner
+ {
+    width:200px;
+    float: left;
+    font-size: 18px;
+    background-color:pink;
+    margin-top: 2px;
+ }
+  .titile
+  {
+    font-size: 30px;
+  }
+ 
+ 
+
+
+
+ 
+
+ 
+ 
+ 
