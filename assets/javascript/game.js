@@ -1,6 +1,7 @@
 ﻿var GuesessLeft = 9;
 var losees = 0 ;
 var Wins = 0;
+var YourGuesses = [];
 var computerLetter = MakeLetter();
 console.log(computerLetter);
 
@@ -8,7 +9,9 @@ document.onkeyup = function (event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
 
         var key = event.key;
-        document.getElementById("GuessesLeft").innerHTML = GuesessLeft;
+        document.getElementById('YourGuesses').innerHTML = event.key;
+        YourGuesses.push(event.key);
+        document.getElementById("YourGuesses").innerHTML = YourGuesses;
         console.log(key);
         console.log(computerLetter);
 
@@ -16,13 +19,14 @@ document.onkeyup = function (event) {
          if (computerLetter === key) {
              GuesessLeft = 9  ;
              Wins ++ ; 
+             YourGuesses = [];
              document.getElementById("Wins").innerHTML = Wins;
              document.getElementById("GuessesLeft").innerHTML = GuesessLeft;
              console.log("GuesessLeft" + GuesessLeft);
              console.log("Wins" + Wins);
              console.log("losees" + losees);
              console.log("You are Winer ! new game is starting");
-             //alert("You are Winer ! new game is starting");
+             alert("You are Winer ! new game is starting");
              computerLetter = MakeLetter();
              console.log("computerLetter  " + computerLetter);
 
@@ -41,8 +45,9 @@ document.onkeyup = function (event) {
                        computerLetter = MakeLetter();
                        losees++;
                        document.getElementById("Losses").innerHTML = losees;
-                       //alert(" You are looser ! new game  is starting and  the letter is  " + computerLetter);
+                       alert(" You are looser ! new game  is starting and  the letter is  " + computerLetter);
                        GuesessLeft =  9 ;
+                       YourGuesses = [];
                        document.getElementById("GuessesLeft").innerHTML = GuesessLeft;
                        console.log("You are looses new game start"); 
                        console.log("GuesessLeft" + GuesessLeft);
@@ -65,4 +70,3 @@ document.onkeyup = function (event) {
         text = possible.charAt(Math.floor(Math.random() * possible.length));
         return text;
     }
-
